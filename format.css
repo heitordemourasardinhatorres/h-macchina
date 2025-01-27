@@ -1,0 +1,405 @@
+/* Estilo Geral */
+body {
+  background-color: rgb(20, 20, 20);
+  font-family: 'Funnel Display', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Seção introdução */
+.intro {
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+.header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0 0.5rem 0;
+  
+}
+
+.logopng{
+  border-radius: 50%;
+  margin: 0 2rem 0 0 ;
+  width: 5rem;
+  transition: 300ms;
+}
+.logopng:hover{
+  transition: 300ms;
+  width: 5.2rem;
+  box-shadow: 
+    0 -20px 20px -10px green, 
+    0 20px 20px -10px red;   
+
+
+
+}
+.logo {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: green;
+    cursor: default;
+}
+
+.logo::after{
+  content: ""; 
+  display: block;
+  margin: auto;
+  width: 0;
+  height: 2px;
+  background-color: rgb(34, 160, 34);
+  transition: 300ms;
+}
+.logo:hover::after {
+  width: 100%; 
+}
+
+.navigation{
+display: flex;
+}
+
+
+.navigation ul {
+  color: white;
+  font-family: 'Funnel Display';
+  text-align: center;
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  margin: auto auto auto 2rem;
+}
+.navigation a {
+  text-decoration: none;
+}
+
+.navigation a:hover{
+  transition: 300ms;
+  color: rgb(211, 211, 211);
+  text-shadow: 2px 2px 4px gray;
+}
+
+.title{
+  color: white;
+  font-family: 'Funnel Display';
+  font-size: 4rem;
+  width: fit-content;
+  margin: auto auto auto auto;
+  cursor: default;
+}
+.main-content {
+  display: flex;
+  text-align: left;
+  margin: 1rem auto 2rem auto;
+}
+.main-content p{
+  color: white;
+  font-size: 2rem;
+  margin: auto 1rem auto 1rem;
+  cursor: default;
+}
+
+.video_maq{
+  width: 50%;
+  margin: 1rem 2rem 1rem 1rem;
+  transition: 300ms;
+}
+.video_maq:hover{
+  transition: 300ms;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+/* Contato */
+.chat-button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-left: 15rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.chat-button:hover {
+  background-color: darkgreen;
+}
+/*****************************************************************************************************************/
+/* Seção Sobre Nós */
+.about {
+  background-color: rgb(30, 30, 30);
+  padding: 1rem 2rem 2rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.about_h2 {
+  color: white;
+  font-size: 3rem;
+  font-family: 'Funnel Display';
+  cursor: default;
+  text-align: center;
+}
+
+.about_p{
+  margin: auto auto auto auto;
+  font-size: 1.5rem;
+  cursor: default;
+  width: fit-content;
+  display: inline;
+}
+
+.about_p_hmacchina{
+  color: green;
+  font-size: 1.5rem;
+  margin: auto auto auto auto;
+  width:min-content;
+  cursor: default;
+  display: inline;
+}
+
+
+/* Produtos */
+.products {
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  cursor: default;
+}
+
+.product-list {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.product-item {
+  background-color: rgb(40, 40, 40);
+  border-radius: 8px;
+  padding: 1rem;
+  max-width: 300px;
+  text-align: center;
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.product-item img:hover{
+  transition: 300ms;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+
+}
+
+/*****************************************************************************************************************/
+
+/* Galeria */
+.gallery {
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  cursor: default;
+}
+
+.carousel {
+  position: relative;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  overflow: hidden; 
+  border-radius: 8px;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease; 
+}
+
+.carousel-images img {
+  width: 100%;
+  flex-shrink: 0; 
+  border-radius: 8px;
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+button.prev:hover, button.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+button.prev {
+  left: 10px; /* Botão anterior à esquerda */
+}
+
+button.next {
+  right: 10px; /* Botão próximo à direita */
+}
+
+/*****************************************************************************************************************/
+
+/* Rodapé */
+.footer {
+  background-color: rgb(10, 10, 10);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  cursor: default;
+}
+
+/*****************************************************************************************************************/
+
+/* RESPONSIVIDADE */
+
+/* Para telas menores que 1024px (tablets e laptops pequenos) */
+@media screen and (max-width: 1024px) {
+  .header {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .logopng {
+    margin: 0 auto;
+    width: 4rem;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  .navigation {
+    margin: 1rem 0;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .chat-button {
+    margin: 0 auto;
+  }
+
+  .main-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .video_maq {
+    width: 90%;
+    margin: 1rem auto;
+  }
+
+  .products .product-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Para telas menores que 768px (smartphones grandes e tablets) */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logopng {
+    width: 3.5rem;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .navigation ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .main-content p {
+    font-size: 1.5rem;
+  }
+
+  .video_maq {
+    width: 100%;
+  }
+
+  .about_h2 {
+    font-size: 2.5rem;
+  }
+
+  .about_p {
+    font-size: 1.2rem;
+  }
+
+  .products .product-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .product-item {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .carousel {
+    width: 100%;
+  }
+}
+
+/* Para telas menores que 480px (smartphones pequenos) */
+@media screen and (max-width: 480px) {
+  .logopng {
+    width: 3rem;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .navigation ul {
+    gap: 0.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .main-content p {
+    font-size: 1rem;
+  }
+
+  .chat-button {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .about_p {
+    font-size: 1rem;
+  }
+
+  .products {
+    padding: 1rem;
+  }
+
+  .carousel {
+    width: 100%;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+  }
+}
+
