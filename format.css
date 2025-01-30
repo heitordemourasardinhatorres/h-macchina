@@ -29,11 +29,8 @@ body {
   transition: 300ms;
   width: 5.2rem;
   box-shadow: 
-    0 -20px 20px -10px green, 
-    0 20px 20px -10px red;   
-
-
-
+    0 -20px 30px -10px green, 
+    0 20px 30px -10px red;  
 }
 .logo {
     font-size: 36px;
@@ -114,13 +111,22 @@ display: flex;
 .chat-button {
   background-color: green;
   color: white;
- /* border: none;*/
   padding: 10px 20px;
   font-size: 16px;
-  margin-left: 15rem;
+  margin-left: 10rem;
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s ease;
+  display: flex;
+  gap: 10px;
+}
+.whatsapp_logo{
+  width: 3rem;
+  height: auto;
+}
+
+.p_contato{
+  align-content: center;
 }
 .chat-button:hover {
   background-color: darkgreen;
@@ -267,8 +273,8 @@ button.next {
 
 /* RESPONSIVIDADE */
 
-/* Para telas menores que 1024px (tablets e laptops pequenos) */
-@media screen and (max-width: 1024px) {
+/* Para telas menores que 1173px (tablets e laptops pequenos) */
+@media screen and (max-width: 1173px) {
   .header {
     flex-wrap: wrap;
     text-align: center;
@@ -317,11 +323,18 @@ button.next {
   }
 
   .logopng {
-    width: 3.5rem;
+    width: 10rem;
+  }
+
+  .logopng:hover{
+    width: 11rem;
+    box-shadow: 
+    0 -20px 30px -10px green, 
+    0 20px 30px -10px red;  
   }
 
   .logo {
-    font-size: 24px;
+    font-size: 50px;
   }
 
   .navigation ul {
