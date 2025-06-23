@@ -1,92 +1,211 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>H. MACCHINA - Máquinas Alimentícias</title>
+    <!-- Meta tags essenciais - Melhoradas para SEO e performance -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="H.MACCHINA - Máquinas alimentícias de alta performance para indústria. Soluções inovadoras desde 2023 em Taubaté/SP.">
-    <link rel="stylesheet" href="format.css">
-    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <meta name="description" content="H.MACCHINA - Máquinas alimentícias de alta performance para indústria. Soluções inovadoras desde 2000 em Taubaté/SP. Especialistas em equipamentos para produção de massas e processamento alimentício.">
+    
+    <!-- Meta tags adicionais para SEO -->
+    <meta name="keywords" content="máquinas alimentícias, equipamentos industriais, produção de massas, lasanha, processamento alimentício, Taubaté">
+    <meta name="author" content="H.MACCHINA">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph para redes sociais -->
+    <meta property="og:title" content="H.MACCHINA - Máquinas Alimentícias de Alta Performance">
+    <meta property="og:description" content="Soluções inovadoras em máquinas alimentícias desde 2000. Especialistas em equipamentos para indústria alimentícia.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/logo.png">
+    
+    <title>H.MACCHINA - Máquinas Alimentícias de Alta Performance | Equipamentos Industriais</title>
+    
+    <!-- Preconnect para otimização de carregamento de fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Preload da fonte principal para melhor performance -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Funnel+Display:wght@300..800&display=swap" as="style">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon otimizado -->
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="images/logo.png">
+    
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="format.css">
+    
+    <!-- Tailwind CSS - mantido conforme original -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    
+    <!-- Schema.org para SEO estruturado -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "H.MACCHINA",
+        "description": "Máquinas alimentícias de alta performance para indústria",
+        "foundingDate": "2000",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Álvaro Marcondes de Mattos, 661",
+            "addressLocality": "Taubaté",
+            "addressRegion": "SP",
+            "postalCode": "12092-500",
+            "addressCountry": "BR"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+55-12-99756-7946",
+            "contactType": "customer service"
+        }
+    }
+    </script>
 </head>
 
 <body>
-        <!-- Seção Início -->
-
-    <div class="intro">
-        <header class="header">
-            <img class="logopng" src="images/logo.png" alt="Logo da H.MACCHINA">
-            <h1 class="logo">H.MACCHINA</h1>
-            <nav class="navigation">
-
-                <a href="https://wa.me/5512997567946" target="_blank" class="chat-button">
-                    <img class="whatsapp_logo" src="images/whatsapp logo.png">
-                    <p class="p_contato">Fale Conosco</p>
+    <!-- Seção Início - Melhorada com semântica HTML5 -->
+    <section class="intro" role="banner">
+        <!-- Header com navegação principal -->
+        <header class="header" role="navigation">
+            <!-- Logo com melhor acessibilidade -->
+            <img class="logopng" 
+                 src="h.macchina-raiz/images/logo.png" 
+                 alt="Logotipo da H.MACCHINA - Máquinas Alimentícias" 
+                 loading="eager"
+                 width="80" 
+                 height="80">
+            
+            <h1 class="logo" role="heading" aria-level="1">H.MACCHINA</h1>
+            
+            <!-- Navegação principal com melhor acessibilidade -->
+            <nav class="navigation" role="navigation" aria-label="Navegação principal">
+                <!-- Botão de contato WhatsApp -->
+                <a href="https://wa.me/5512997567946" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="chat-button"
+                   aria-label="Falar conosco via WhatsApp">
+                    <img class="whatsapp_logo" 
+                         src="h.macchina-raiz/images/whatsapp logo.png" 
+                         alt="Ícone WhatsApp"
+                         loading="lazy"
+                         width="48"
+                         height="48">
+                    <span class="p_contato">Fale Conosco</span>
                 </a>
 
-                <ul>
-                    <li><a href="#sobre-nos">SOBRE NÓS</a></li>
-                    <li><a href="#produtos">PRODUTOS</a></li>
-                    <li><a href="#galeria">GALERIA</a></li>
-                    <li><a href="https://wa.me/5512997567946">CONTATO</a></li>
+                <!-- Menu de navegação -->
+                <ul role="menubar">
+                    <li role="none"><a href="#sobre-nos" role="menuitem">SOBRE NÓS</a></li>
+                    <li role="none"><a href="#produtos" role="menuitem">PRODUTOS</a></li>
+                    <li role="none"><a href="#galeria" role="menuitem">GALERIA</a></li>
+                    <li role="none"><a href="https://wa.me/5512997567946" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer"
+                                       role="menuitem">CONTATO</a></li>
                 </ul>
             </nav>
         </header>
 
-        <h2 class="title">Seja Bem-Vindo!</h2>
-        <main class="main-content">
-            <p>Transformamos inovação em produtividade! Máquinas alimentícias de ponta para elevar a eficiência e qualidade do seu negócio.</p>
-            <video class="video_maq" src="images/maquina_de_lasanha.mp4"  muted autoplay loop ></video>
-        </main>
-    </div>
-
-    <!-- Seção Sobre Nós -->
-    <section id="sobre-nos" class="about">
-        <h2 class="about_h2">Quem Somos</h2>
-        <p class="about_p">Na </p><p class="about_p_hmacchina">H.MACCHINA </p><p class="about_p">somos especialistas em criar soluções inovadoras para o setor alimentício, ajudando nossos clientes a alcançarem máxima eficiência e qualidade. Fundada no ano de 2000, acumulamos mais de duas décadas de experiência e dedicação ao desenvolvimento de máquinas alimentícias que transformam processos industriais. Localizados estrategicamente na Av. Álvaro Marcondes de Mattos, 661 - Taubaté - SP, 12092-500, estamos prontos para atender clientes de todo o Brasil com excelência e compromisso. Nossa missão é impulsionar o sucesso de nossos parceiros através de tecnologia de ponta e atendimento personalizado.</p>
-    </section>
-
-    <!-- Seção Produtos -->
-    <section id="produtos" class="products">
-        <h2>Nossos Produtos</h2>
-        <div class="product-list">
-            <div class="product-item">
-                <img src="images/maquina_de_lasanha_4.png" alt="Produto 1">
-                <h3>Máquina produtora de massas de lasanha</h3>
-                <p>Alta eficiência e precisão no processamento de massas.</p>
-            </div>
-            <div class="product-item">
-                <img src="images/maquina_de_lasanha_5.JPG" alt="Produto 2">
-                <h3>esfolheador de massas</h3>
-                <p>Praticidade, agilidade e padronização nas espressuras de suas massas.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção Galeria -->
-    <section id="galeria" class="gallery">
-        <h2>Galeria</h2>
-        <div class="carousel">
-          <button class="prev">&#10094;</button>
-          <div class="carousel-images">
-            <img src="images/cortador_lasanha.jpg" alt="Máquina 1">
-            <img src="images/maquinaalimenticia_01.png" alt="Máquina 2">
-            <img src="images/maquina_lasanha.png" alt="Máquina 3">
-            <img src="images/cortador_lasanha.jpg" alt="Máquina 4">
-          </div>
-          <button class="next">&#10095;</button>
-        </div>
+        <!-- Título principal -->
+        <h2 class="title" role="heading" aria-level="2">Seja Bem-Vindo!</h2>
         
+        <!-- Conteúdo principal da seção hero -->
+        <main class="main-content" role="main">
+            <p>Transformamos inovação em produtividade! Máquinas alimentícias de ponta para elevar a eficiência e qualidade do seu negócio.</p>
+            
+            <!-- Vídeo principal com melhor acessibilidade e performance -->
+            <video class="video_maq" 
+                   src="h.macchina-raiz/images/maquina_de_lasanha.mp4" 
+                   muted 
+                   autoplay 
+                   loop 
+                   playsinline
+                   preload="metadata"
+                   aria-label="Vídeo demonstrativo da máquina de lasanha em funcionamento">
+                <p>Seu navegador não suporta vídeos HTML5. <a href="images/maquina_de_lasanha.mp4">Clique aqui para baixar o vídeo</a>.</p>
+            </video>
+        </main>
     </section>
 
-    
-    <!-- Rodapé -->
-    <footer class="footer">
-        <p>© 2023 H. MACCHINA - Todos os Direitos Reservados.</p>
+    <!-- Seção Sobre Nós - Melhorada com semântica -->
+    <section id="sobre-nos" class="about" role="region" aria-labelledby="about-heading">
+        <h2 id="about-heading" class="about_h2" role="heading" aria-level="2">Quem Somos</h2>
+        <p class="about_p">
+            Na <span class="about_p_hmacchina">H.MACCHINA</span> somos especialistas em criar soluções inovadoras para o setor alimentício, ajudando nossos clientes a alcançarem máxima eficiência e qualidade. Fundada no ano de 2000, acumulamos mais de duas décadas de experiência e dedicação ao desenvolvimento de máquinas alimentícias que transformam processos industriais. Localizados estrategicamente na Av. Álvaro Marcondes de Mattos, 661 - Taubaté - SP, 12092-500, estamos prontos para atender clientes de todo o Brasil com excelência e compromisso. Nossa missão é impulsionar o sucesso de nossos parceiros através de tecnologia de ponta e atendimento personalizado.
+        </p>
+    </section>
+
+    <!-- Seção Produtos - Melhorada com semântica e acessibilidade -->
+    <section id="produtos" class="products" role="region" aria-labelledby="products-heading">
+        <h2 id="products-heading" role="heading" aria-level="2">Nossos Produtos</h2>
+        
+        <!-- Lista de produtos com melhor estrutura -->
+        <div class="product-list" role="list">
+            <article class="product-item" role="listitem">
+                <img src="h.macchina-raiz/images/maquina_de_lasanha_4.png" 
+                     alt="Máquina produtora de massas de lasanha - Vista frontal do equipamento industrial"
+                     loading="lazy"
+                     width="300"
+                     height="200">
+                <h3 role="heading" aria-level="3">Máquina produtora de massas de lasanha</h3>
+                <p>Alta eficiência e precisão no processamento de massas.</p>
+            </article>
+            
+            <article class="product-item" role="listitem">
+                <img src="h.macchina-raiz/images/maquina_de_lasanha_5.JPG" 
+                     alt="Esfolheador de massas - Equipamento para padronização de espessuras"
+                     loading="lazy"
+                     width="300"
+                     height="200">
+                <h3 role="heading" aria-level="3">Esfolheador de massas</h3>
+                <p>Praticidade, agilidade e padronização nas espessuras de suas massas.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Seção Galeria - Melhorada com acessibilidade para carrossel -->
+    <section id="galeria" class="gallery" role="region" aria-labelledby="gallery-heading">
+        <h2 id="gallery-heading" role="heading" aria-level="2">Galeria</h2>
+        
+        <!-- Carrossel com melhor acessibilidade -->
+        <div class="carousel" 
+             role="region" 
+             aria-label="Galeria de imagens das máquinas"
+             aria-live="polite">
+            
+            <button class="prev" 
+                    aria-label="Imagem anterior"
+                    type="button">&#10094;</button>
+            
+            <div class="carousel-images" role="img" aria-label="Carrossel de imagens">
+                <img src="h.macchina-raiz/images/cortador_lasanha.jpg" 
+                     alt="Cortador de lasanha - Equipamento de precisão para corte"
+                     loading="lazy">
+                <img src="h.macchina-raiz/images/maquinaalimenticia_01.png" 
+                     alt="Máquina alimentícia modelo 01 - Vista geral do equipamento"
+                     loading="lazy">
+                <img src="h.macchina-raiz/images/maquina_lasanha.png" 
+                     alt="Máquina de lasanha - Sistema completo de produção"
+                     loading="lazy">
+                <img src="h.macchina-raiz/images/cortador_lasanha.jpg" 
+                     alt="Cortador de lasanha - Detalhe do mecanismo de corte"
+                     loading="lazy">
+            </div>
+            
+            <button class="next" 
+                    aria-label="Próxima imagem"
+                    type="button">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Rodapé com melhor semântica -->
+    <footer class="footer" role="contentinfo">
+        <p>&copy; 2023 H.MACCHINA - Todos os Direitos Reservados.</p>
     </footer>
-    <script src="carrosel.js"></script>
+
+    <!-- JavaScript do carrossel - carregado no final para melhor performance -->
+    <script src="carrosel.js" defer></script>
 </body>
 </html>
+

@@ -1,350 +1,517 @@
-/* Estilo Geral */
+/* ===================================================================
+   H.MACCHINA - LANDING PAGE STYLES
+   Versão otimizada com variáveis CSS, melhor performance e acessibilidade
+   =================================================================== */
+
+/* Variáveis CSS para manutenibilidade e consistência */
+:root {
+  /* Paleta de cores */
+  --color-primary: #22a022;           /* Verde principal */
+  --color-primary-dark: #006400;      /* Verde escuro para hover */
+  --color-primary-light: #34a034;     /* Verde claro */
+  --color-background: rgb(20, 20, 20); /* Fundo principal */
+  --color-background-alt: rgb(30, 30, 30); /* Fundo alternativo */
+  --color-background-card: rgb(40, 40, 40); /* Fundo dos cards */
+  --color-background-footer: rgb(10, 10, 10); /* Fundo do rodapé */
+  --color-text: #ffffff;               /* Texto principal */
+  --color-text-muted: rgb(211, 211, 211); /* Texto secundário */
+  
+  /* Tipografia */
+  --font-primary: 'Funnel Display', sans-serif;
+  --font-serif: 'DM Serif Text', serif;
+  
+  /* Tamanhos de fonte fluidos */
+  --font-size-xs: clamp(0.8rem, 2vw, 1rem);
+  --font-size-sm: clamp(1rem, 2.5vw, 1.2rem);
+  --font-size-base: clamp(1.2rem, 3vw, 1.5rem);
+  --font-size-lg: clamp(1.5rem, 4vw, 2rem);
+  --font-size-xl: clamp(2rem, 5vw, 3rem);
+  --font-size-2xl: clamp(2.5rem, 6vw, 4rem);
+  
+  /* Espaçamentos */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  
+  /* Transições */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Sombras */
+  --shadow-glow: 0 0 20px rgba(255, 255, 255, 0.6);
+  --shadow-logo: 0 -20px 30px -10px var(--color-primary), 0 20px 30px -10px #ff0000;
+  --shadow-text: 2px 2px 4px rgba(128, 128, 128, 0.8);
+  
+  /* Bordas */
+  --border-radius: 8px;
+  --border-radius-full: 50%;
+}
+
+/* Reset e configurações base otimizadas */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Estilo Geral com melhor performance */
 body {
-  background-color: rgb(20, 20, 20);
-  font-family: 'Funnel Display', sans-serif;
+  background-color: var(--color-background);
+  font-family: var(--font-primary);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: var(--color-text);
+  /* Otimização para renderização de texto */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===================================================================
+   SEÇÃO INTRODUÇÃO - Otimizada com Grid e Flexbox modernos
+   =================================================================== */
+
+.intro {
+  margin: 0 auto;
+  padding: 0 var(--spacing-sm);
+  max-width: 1200px; /* Largura máxima para melhor legibilidade */
+}
+
+/* Header com layout flexível otimizado */
+.header {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-sm) 0 var(--spacing-xs) 0;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+/* Logo com otimizações de performance */
+.logopng {
+  border-radius: var(--border-radius-full);
+  margin: 0 var(--spacing-lg) 0 0;
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover; /* Garante proporção correta */
+  transition: var(--transition-normal);
+  /* Otimização para animações */
+  will-change: transform, box-shadow;
+}
+
+.logopng:hover {
+  transform: scale(1.04); /* Mais suave que mudança de width */
+  box-shadow: var(--shadow-logo);
+}
+
+/* Título principal com animação otimizada */
+.logo {
+  font-size: clamp(28px, 5vw, 36px);
+  font-weight: bold;
+  text-align: center;
+  color: var(--color-primary);
+  cursor: default;
+  position: relative;
+  transition: var(--transition-normal);
+}
+
+/* Pseudo-elemento otimizado para underline animado */
+.logo::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary-light);
+  transition: var(--transition-normal);
+}
+
+.logo:hover::after {
+  width: 100%;
+}
+
+/* Navegação com layout flexível */
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  margin-left: auto;
+}
+
+.navigation ul {
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-xl);
   margin: 0;
   padding: 0;
 }
 
-
-/* Seção introdução */
-.intro {
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
-.header {
-  display: flex;
-  align-items: center;
-  padding: 1rem 0 0.5rem 0;
-  
-}
-
-.logopng{
-  border-radius: 50%;
-  margin: 0 2rem 0 0 ;
-  width: 5rem;
-  transition: 300ms;
-}
-.logopng:hover{
-  transition: 300ms;
-  width: 5.2rem;
-  box-shadow: 
-    0 -20px 30px -10px green, 
-    0 20px 30px -10px red;  
-}
-.logo {
-    font-size: 36px;
-    font-weight: bold;
-    text-align: center;
-    color: green;
-    cursor: default;
-}
-
-.logo::after{
-  content: ""; 
-  display: block;
-  margin: auto;
-  width: 0;
-  height: 2px;
-  background-color: rgb(34, 160, 34);
-  transition: 300ms;
-}
-.logo:hover::after {
-  width: 100%; 
-}
-
-.navigation{
-display: flex;
-}
-
-
-.navigation ul {
-  color: white;
-  font-family: 'Funnel Display';
-  text-align: center;
-  display: flex;
-  list-style: none;
-  gap: 50px;
-  margin: auto auto auto 2rem;
-}
 .navigation a {
   text-decoration: none;
+  color: inherit;
+  transition: var(--transition-fast);
+  position: relative;
 }
 
-.navigation a:hover{
-  transition: 300ms;
-  color: rgb(211, 211, 211);
-  text-shadow: 2px 2px 4px gray;
+.navigation a:hover {
+  color: var(--color-text-muted);
+  text-shadow: var(--shadow-text);
 }
 
-.title{
-  color: white;
-  font-family: 'Funnel Display';
-  font-size: 4rem;
+/* Título de boas-vindas */
+.title {
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-2xl);
   width: fit-content;
-  margin: auto auto auto auto;
+  margin: var(--spacing-lg) auto;
   cursor: default;
+  text-align: center;
 }
+
+/* Conteúdo principal com layout responsivo */
 .main-content {
   display: flex;
-  text-align: left;
-  margin: 1rem auto 2rem auto;
-}
-.main-content p{
-  color: white;
-  font-size: 2rem;
-  margin: auto 1rem auto 1rem;
-  cursor: default;
+  align-items: center;
+  margin: var(--spacing-sm) auto var(--spacing-lg) auto;
+  gap: var(--spacing-md);
 }
 
-.video_maq{
+.main-content p {
+  color: var(--color-text);
+  font-size: var(--font-size-lg);
+  margin: 0;
+  cursor: default;
+  flex: 1;
+}
+
+/* Vídeo com otimizações de performance */
+.video_maq {
   width: 50%;
-  margin: 1rem 2rem 1rem 1rem;
-  transition: 300ms;
+  max-width: 600px;
+  height: auto;
+  border-radius: var(--border-radius);
+  transition: var(--transition-normal);
+  /* Otimização para animações de transform */
+  will-change: box-shadow;
 }
-.video_maq:hover{
-  transition: 300ms;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+
+.video_maq:hover {
+  box-shadow: var(--shadow-glow);
 }
-/* Contato */
+
+/* ===================================================================
+   BOTÃO DE CONTATO - Otimizado com melhor acessibilidade
+   =================================================================== */
 
 .chat-button {
-  background-color: green;
-  color: white;
+  background-color: var(--color-primary);
+  color: var(--color-text);
   padding: 10px 20px;
   font-size: 16px;
-  margin-left: 10rem;
   border-radius: 5px;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: var(--transition-normal);
   display: flex;
+  align-items: center;
   gap: 10px;
-}
-.whatsapp_logo{
-  width: 3rem;
-  height: auto;
+  text-decoration: none;
+  border: none;
+  /* Melhor acessibilidade para foco */
+  outline-offset: 2px;
 }
 
-.p_contato{
-  align-content: center;
+.chat-button:hover,
+.chat-button:focus {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-1px);
 }
-.chat-button:hover {
-  background-color: darkgreen;
+
+.whatsapp_logo {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
 }
-/*****************************************************************************************************************/
-/* Seção Sobre Nós */
+
+.p_contato {
+  margin: 0;
+  font-weight: 500;
+}
+
+/* ===================================================================
+   SEÇÃO SOBRE NÓS - Layout otimizado
+   =================================================================== */
+
 .about {
-  background-color: rgb(30, 30, 30);
-  padding: 1rem 2rem 2rem 2rem;
+  background-color: var(--color-background-alt);
+  padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
   text-align: center;
-  color: white;
+  color: var(--color-text);
 }
 
 .about_h2 {
-  color: white;
-  font-size: 3rem;
-  font-family: 'Funnel Display';
+  color: var(--color-text);
+  font-size: var(--font-size-xl);
+  font-family: var(--font-primary);
   cursor: default;
   text-align: center;
+  margin-bottom: var(--spacing-md);
 }
 
-.about_p{
-  margin: auto auto auto auto;
-  font-size: 1.5rem;
+.about_p {
+  font-size: var(--font-size-base);
   cursor: default;
-  width: fit-content;
-  display: inline;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.about_p_hmacchina{
-  color: green;
-  font-size: 1.5rem;
-  margin: auto auto auto auto;
-  width:min-content;
-  cursor: default;
-  display: inline;
+.about_p_hmacchina {
+  color: var(--color-primary);
+  font-weight: 600;
 }
 
+/* ===================================================================
+   SEÇÃO PRODUTOS - Grid responsivo otimizado
+   =================================================================== */
 
-/* Produtos */
 .products {
-  padding: 2rem;
+  padding: var(--spacing-lg);
   text-align: center;
-  color: white;
+  color: var(--color-text);
   cursor: default;
 }
 
+.products h2 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Grid responsivo para produtos */
 .product-list {
-  display: flex;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-md);
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: var(--spacing-sm);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .product-item {
-  background-color: rgb(40, 40, 40);
-  border-radius: 8px;
-  padding: 1rem;
-  max-width: 300px;
+  background-color: var(--color-background-card);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-sm);
   text-align: center;
+  transition: var(--transition-normal);
+  /* Otimização para hover */
+  will-change: transform;
+}
+
+.product-item:hover {
+  transform: translateY(-4px);
 }
 
 .product-item img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-sm);
+  transition: var(--transition-normal);
 }
 
-.product-item img:hover{
-  transition: 300ms;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
-
+.product-item img:hover {
+  box-shadow: var(--shadow-glow);
 }
 
-/*****************************************************************************************************************/
+.product-item h3 {
+  font-size: var(--font-size-base);
+  margin: var(--spacing-sm) 0;
+  text-transform: capitalize;
+}
 
-/* Galeria */
+.product-item p {
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===================================================================
+   SEÇÃO GALERIA - Carrossel otimizado
+   =================================================================== */
+
 .gallery {
-  padding: 2rem;
+  padding: var(--spacing-lg);
   text-align: center;
-  color: white;
+  color: var(--color-text);
   cursor: default;
 }
 
+.gallery h2 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Container do carrossel com melhor performance */
 .carousel {
   position: relative;
   width: 80%;
+  max-width: 800px;
   height: auto;
   margin: 0 auto;
-  overflow: hidden; 
-  border-radius: 8px;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  /* Otimização para animações */
+  will-change: transform;
 }
 
 .carousel-images {
   display: flex;
-  transition: transform 0.5s ease; 
+  transition: transform var(--transition-slow);
+  /* Otimização para animações suaves */
+  will-change: transform;
 }
 
 .carousel-images img {
   width: 100%;
-  flex-shrink: 0; 
-  border-radius: 8px;
+  height: 400px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: var(--border-radius);
 }
 
-button.prev, button.next {
+/* Botões do carrossel com melhor acessibilidade */
+button.prev,
+button.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  color: var(--color-text);
   border: none;
-  padding: 10px 15px;
+  padding: 12px 16px;
   cursor: pointer;
-  z-index: 1;
-  border-radius: 50%;
+  z-index: 10;
+  border-radius: var(--border-radius-full);
+  font-size: 18px;
+  transition: var(--transition-fast);
+  /* Melhor acessibilidade */
+  outline-offset: 2px;
 }
 
-button.prev:hover, button.next:hover {
+button.prev:hover,
+button.next:hover,
+button.prev:focus,
+button.next:focus {
   background-color: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.1);
 }
 
 button.prev {
-  left: 10px; /* Botão anterior à esquerda */
+  left: 15px;
 }
 
 button.next {
-  right: 10px; /* Botão próximo à direita */
+  right: 15px;
 }
 
-/*****************************************************************************************************************/
+/* ===================================================================
+   RODAPÉ - Estilo otimizado
+   =================================================================== */
 
-/* Rodapé */
 .footer {
-  background-color: rgb(10, 10, 10);
-  color: white;
+  background-color: var(--color-background-footer);
+  color: var(--color-text);
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  padding: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
   cursor: default;
+  font-size: var(--font-size-sm);
 }
 
-/*****************************************************************************************************************/
+/* ===================================================================
+   RESPONSIVIDADE OTIMIZADA - Mobile-first approach
+   =================================================================== */
 
-/* RESPONSIVIDADE */
-
-/* Para telas menores que 1173px (tablets e laptops pequenos) */
+/* Tablets e laptops pequenos */
 @media screen and (max-width: 1173px) {
   .header {
-    flex-wrap: wrap;
+    justify-content: center;
     text-align: center;
   }
 
   .logopng {
     width: 4rem;
-    margin-left: 1rem;
+    height: 4rem;
   }
 
   .logo {
-    font-size: 28px;
+    font-size: clamp(24px, 4vw, 28px);
   }
 
   .navigation {
-    margin: 1rem 0;
     flex-direction: column;
-    gap: 1rem;
+    gap: var(--spacing-sm);
+    margin: var(--spacing-sm) 0;
   }
 
   .chat-button {
-    margin: 0 auto;
+    margin: 0;
   }
 
   .main-content {
     flex-direction: column;
     text-align: center;
+    gap: var(--spacing-md);
   }
 
   .video_maq {
     width: 90%;
-    margin: 1rem auto;
-  }
-
-  .products .product-list {
-    flex-wrap: wrap;
-    justify-content: center;
+    max-width: 500px;
   }
 }
 
-/* Para telas menores que 768px (smartphones grandes e tablets) */
+/* Smartphones grandes e tablets */
 @media screen and (max-width: 768px) {
   .header {
     flex-direction: column;
-    text-align: center;
+    gap: var(--spacing-sm);
   }
 
   .logopng {
-    width: 10rem;
+    width: 6rem;
+    height: 6rem;
   }
 
-  .logopng:hover{
-    width: 11rem;
-    box-shadow: 
-    0 -20px 30px -10px green, 
-    0 20px 30px -10px red;  
+  .logopng:hover {
+    transform: scale(1.1);
   }
 
   .logo {
-    font-size: 50px;
+    font-size: clamp(32px, 6vw, 50px);
+  }
+
+  .navigation {
+    width: 100%;
   }
 
   .navigation ul {
     flex-direction: column;
-    gap: 1rem;
-    margin: auto auto auto auto;
+    gap: var(--spacing-sm);
+    width: 100%;
   }
 
   .main-content p {
-    font-size: 1.5rem;
+    font-size: var(--font-size-base);
   }
 
   .video_maq {
@@ -352,50 +519,58 @@ button.next {
   }
 
   .about_h2 {
-    font-size: 2.5rem;
+    font-size: var(--font-size-lg);
   }
 
   .about_p {
-    font-size: 1.2rem;
+    font-size: var(--font-size-sm);
   }
 
-  .products .product-list {
-    flex-direction: column;
-    gap: 1rem;
+  .product-list {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
   }
 
   .product-item {
-    max-width: 90%;
-    margin: 0 auto;
+    max-width: 100%;
   }
 
   .carousel {
     width: 100%;
   }
+
+  .carousel-images img {
+    height: 300px;
+  }
 }
 
-/* Para telas menores que 480px (smartphones pequenos) */
+/* Smartphones pequenos */
 @media screen and (max-width: 480px) {
+  :root {
+    --spacing-sm: 0.75rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+  }
+
   .logopng {
-    width: 3rem;
+    width: 4rem;
+    height: 4rem;
   }
 
   .logo {
-    font-size: 20px;
+    font-size: clamp(20px, 5vw, 24px);
   }
 
   .navigation ul {
-    gap: 0.5rem;
-    margin: auto auto auto auto;
-
+    gap: var(--spacing-xs);
   }
 
   .title {
-    font-size: 2rem;
+    font-size: var(--font-size-lg);
   }
 
   .main-content p {
-    font-size: 1rem;
+    font-size: var(--font-size-sm);
   }
 
   .chat-button {
@@ -404,19 +579,56 @@ button.next {
   }
 
   .about_p {
-    font-size: 1rem;
+    font-size: var(--font-size-xs);
   }
 
   .products {
-    padding: 1rem;
+    padding: var(--spacing-sm);
   }
 
-  .carousel {
-    width: 100%;
+  .carousel-images img {
+    height: 250px;
   }
 
   .footer {
-    font-size: 0.8rem;
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-sm);
+  }
+}
+
+/* ===================================================================
+   OTIMIZAÇÕES DE PERFORMANCE E ACESSIBILIDADE
+   =================================================================== */
+
+/* Redução de movimento para usuários sensíveis */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Melhor contraste para modo escuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text-muted: rgb(200, 200, 200);
+  }
+}
+
+/* Otimização para impressão */
+@media print {
+  .video_maq,
+  .carousel,
+  .chat-button {
+    display: none;
+  }
+  
+  body {
+    background: white;
+    color: black;
   }
 }
 
